@@ -14,11 +14,11 @@ public class Smurf {
 	}
  
 	public String getName() {
-		return "My name is " + name + " Smurf.";
+		return "My name is " + name + " Smurf ";
 	}
  
 	public void eat() {
-		System.out.println(name + " Smurf is eating Smurfberries.");
+		System.out.println(name + " Smurf is eating Smurfberries");
 	}
  
 	/* Papa Smurf wears a red hat, all the others are white. */
@@ -26,18 +26,24 @@ public class Smurf {
 		// 3. Fill in this method
 
 		if(name.equals("Papa")){
-		return "Red";
+		return "red";
 		}
 		
 		else{
-			return "White";
+			return "white";
 		}
 	}
  
 	/* Smurfette is the only female Smurf. */
 	public String isGirlOrBoy() {
 		// 4. Fill in this method
-		return "";
+		if(name.equals("Smurfette")){
+			return "girl";
+		}
+		else{
+			return "boy";
+		}
+		
 	}
  
 }

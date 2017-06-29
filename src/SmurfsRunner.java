@@ -10,8 +10,16 @@ public static void main(String[] args) {
 	Smurf Handy = new Smurf("Handy");
 	System.out.println(Handy.getName());
 	Handy.eat();
+	
 	Smurf Papa = new Smurf("Papa");
 	System.out.println(Papa.getName());
+	System.out.println(Papa.getName() + "and I'm wearing a " + Papa.getHatColor() + " hat ");
+	System.out.println(Papa.getName() + "and I'm a " + Papa.isGirlOrBoy());
+	
+	Smurf Smurfette = new Smurf("Smurfette");
+	System.out.println(Smurfette.getName());
+	System.out.println(Smurfette.getName() + "and I'm wearing a " + Smurfette.getHatColor() + " hat ");
+	System.out.println(Smurfette.getName() + "and I'm a " + Smurfette.isGirlOrBoy());
 	
 	
 }
