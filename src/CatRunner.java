@@ -1,15 +1,18 @@
 
 public class CatRunner {
-	 public static void main(String[] args) {
-	        /* Do the following things without changing the Cat class */
-		 Cat toby = new Cat("toby");
-	        // 1. Make the Cat meow
-	        toby.meow();
-	        // 2. Get the Cat to print it's name
-	        toby.printName();
-	        // 3. Kill the Cat!
-	        for(int i = 0; i < 12`; i++){
-	        toby.kill();
-	        }
-	    }
+	public static void main(String[] args) {
+		/* Do the following things without changing the Cat class */
+		Cat kitty = new Cat("Fluffy");
+		// 1. Make the Cat meow
+		kitty.meow();
+		// 2. Get the Cat to print it's name
+		kitty.printName();
+		// 3. Kill the Cat!
+		for(int i = 0; i <= 9; i++) {
+		kitty.kill();
+		}
+		
+		Cat kitty2 = new Cat("Whickers");
+		kitty2.printName();
+	}
 }
