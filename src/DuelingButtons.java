@@ -1,18 +1,17 @@
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
- 
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
- 
+
 public class DuelingButtons implements ActionListener {
 	
 	public static void main(String[] args) {
 		new DuelingButtons().createUI();
 	}
- 
+
 	JButton leftButton = new JButton();
 	JButton rightButton = new JButton();
 	
@@ -21,12 +20,8 @@ public class DuelingButtons implements ActionListener {
 	
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
- 
+
 	private void createUI() {
-		leftButton.setBackground(Color.pink);
-		rightButton.setBackground(Color.blue);
-		leftButton.setOpaque(true);
-		rightButton.setOpaque(true);
 		// 1. Add the panel to the frame
 		frame.add(panel);
 		// 2. Make the frame visible
@@ -48,7 +43,7 @@ public class DuelingButtons implements ActionListener {
 		// 10. Set the title of the frame to "Demanding Buttons"
 		frame.setTitle("Demanding Buttons");
 	}
- 
+
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		JButton buttonPressed = (JButton) arg0.getSource();
@@ -59,7 +54,7 @@ public class DuelingButtons implements ActionListener {
 			// Set the PREFERRED size of the rightButton to BIG
 			// Set the text of the leftButton to "Click Me!"
 			// Set the PREFERRED size of the leftButton to SMALL
-		if(buttonPressed == leftButton){
+		if(buttonPressed == leftButton) {
 			rightButton.setText("No, click me!");
 			rightButton.setPreferredSize(BIG);
 			leftButton.setText("Click me!");
@@ -67,15 +62,15 @@ public class DuelingButtons implements ActionListener {
 		}
 		
 		/* If the buttonPressed was the rightButton, do the opposite. */
-		if(buttonPressed == rightButton){
+		else {
 			leftButton.setText("No, click me!");
 			leftButton.setPreferredSize(BIG);
 			rightButton.setText("Click me!");
 			rightButton.setPreferredSize(SMALL);
 		}
- 
+		
+
 		frame.pack();
-		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 	}
 }
- 
+

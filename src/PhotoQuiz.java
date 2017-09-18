@@ -39,7 +39,8 @@ public class PhotoQuiz {
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
 		quizWindow.remove(c);
 		// 10. find another image and create it (might take more than one line of code)
-		String photo2  = "http://www.awesomelycute.com/gallery/2014/03/cute-puppies-awesomelycute-com-3253.jpg";
+		String photo2 = "http://cdn.attackofthecute.com/January-04-2013-19-53-34-fd.jpg";
+		//String photo2  = "http://www.awesomelycute.com/gallery/2014/03/cute-puppies-awesomelycute-com-3253.jpg";
 		c = createImage(photo2);
 		// 11. add the second image to the quiz window
 		quizWindow.add(c);
