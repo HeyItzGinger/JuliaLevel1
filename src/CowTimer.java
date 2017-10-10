@@ -1,20 +1,23 @@
 import java.applet.AudioClip;
 import java.io.IOException;
 import javax.swing.JApplet;
+import javax.swing.JOptionPane;
 
 public class CowTimer {
 	/*
-	 * This is an advanced recipe. There may be more than one line of code for
-	 * each instruction.
-	 * Work in seconds when testing, then change to minutes
+	 * This is an advanced recipe. There may be more than one line of code for each
+	 * instruction. Work in seconds when testing, then change to minutes
 	 */
 
 	public static void main(String[] args) throws InterruptedException {
 		/* 1. Make a CowTimer, set the time and start it. */
-		CowTimer callum = new CowTimer();
-		callum.setTime(10);
-		callum.start();
-
+		for (int i = 0; i < 2; i++) {
+			String time = JOptionPane.showInputDialog("How many minutes should I set the timer for?");
+			int timeINT = Integer.parseInt(time);
+			CowTimer callum = new CowTimer();
+			callum.setTime(timeINT);
+			callum.start();
+		}
 	}
 
 	private int minutes;
@@ -26,30 +29,29 @@ public class CowTimer {
 
 	public void start() throws InterruptedException {
 		/*
-		 * 2. Count down the minutes, print the current minute then sleep for 60
-		 * seconds using Thread.sleep(int milliseconds).
+		 * 2. Count down the minutes, print the current minute then sleep for 60 seconds
+		 * using Thread.sleep(int milliseconds).
 		 */
-		for(int i = minutes; i>0; i--) {
+		for (int i = minutes; i > 0; i--) {
 			System.out.println(i);
 			Thread.sleep(60000);
 		}
 
 		/*
-		 * 3. When the timer is finished, use the playSound method to play a moo
-		 * sound. You can download one from freesound.org, then drag it into
-		 * your default package. Tell the students (by speaking) it's time to walk.
+		 * 3. When the timer is finished, use the playSound method to play a moo sound.
+		 * You can download one from freesound.org, then drag it into your default
+		 * package. Tell the students (by speaking) it's time to walk.
 		 */
 		playSound("Cat.wav");
-		
+
 	}
 
 	private void playSound(String fileName) {
-		AudioClip sound = JApplet
-				.newAudioClip(getClass().getResource(fileName));
+		AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
 		sound.play();
 	}
 
-private void speak(String stuffToSay) {
+	private void speak(String stuffToSay) {
 		try {
 			Runtime.getRuntime().exec("say " + stuffToSay).waitFor();
 		} catch (Exception e) {
@@ -57,6 +59,4 @@ private void speak(String stuffToSay) {
 		}
 	}
 
-
 }
-
