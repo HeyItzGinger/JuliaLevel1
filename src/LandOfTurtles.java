@@ -1,6 +1,8 @@
 
 
-	import javax.swing.JFrame;
+	import java.util.Random;
+
+import javax.swing.JFrame;
 	import org.teachingextensions.logo.MultiTurtlePanel;
 	import org.teachingextensions.logo.Turtle;
 
@@ -17,14 +19,17 @@
 			// 3. Set the background image of the panel to the Galapagos Islands 
 			payton.setBackgroundImage(galapagosIslands);
 			// 4. Instantiate a Turtle 
-			Turtle timothy = new Turtle();
+		francine.pack();
 	// 5. Add the turtle to the panel 
-			payton.addTurtle(timothy);
+			
 			// 6. Put 50 Turtles on the beach
-			for(int i = 0; i < 50; i++) {
-				
+			Random r = new Random();
+			for(int i = 0; i < 200; i++) {
+				Turtle timothy = new Turtle();
+				timothy.setX(r.nextInt(800));
+				timothy.setY(r.nextInt(500));
+				payton.addTurtle(timothy);
 			}
-			francine.pack();
 		}
 	}
 
