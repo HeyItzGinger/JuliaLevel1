@@ -16,9 +16,9 @@ public class NetflixRunner {
 
 	Movie TGTLTT = new Movie("TGTLTT", 5);
 	Movie IT = new Movie("IT", 3);
-	Movie TLHC = new Movie("TLHC", 5);
+	Movie TLHC = new Movie("TLHC", 4);
 	Movie HPCOS = new Movie("HPCOS", 2);
-	Movie HTGSC = new Movie("HTGSC", 4);
+	Movie HTGSC = new Movie("HTGSC", 1);
 
 	
 	System.out.println(TGTLTT.getTicketPrice());
@@ -37,7 +37,8 @@ public class NetflixRunner {
 	
 	nq.printMovies();
 	
-	System.out.println("The best movie is " + nq + ".");
+	System.out.println("The best movie is " + nq.getBestMovie() + ".");
+	System.out.println("The second best movie is " + nq.getMovie(1));
 
 }
 }

@@ -1,6 +1,7 @@
 /Backpack.class
 /BookOfIllusions.class
 /ButtonListener.class
+/ButtonListener2.class
 /ButtonListenerRunner.class
 /Cat.class
 /Cat.wav
@@ -17,7 +18,10 @@
 /HarryPotterRunner.class
 /LandOfTurtles.class
 /Left.png
+/Movie.class
 /MyFirstFrame.class
+/NetflixQueue.class
+/NetflixRunner.class
 /Pencil.class
 /PhotoQuiz.class
 /Right.png
@@ -31,9 +35,3 @@
 /Textbook.class
 /download.jpg
 /images.jpg
-/ButtonListener2.class
-/Movie.class
-/NetflizQueue.class
-/NetflizRunner.class
-/NetflixQueue.class
-/NetflixRunner.class
