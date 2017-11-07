@@ -1,3 +1,4 @@
+/Array.class
 /Backpack.class
 /BookOfIllusions.class
 /ButtonListener.class
@@ -32,9 +33,9 @@
 /Smurf.class
 /SmurfsRunner.class
 /Supply.class
+/Taco.class
+/TacoRunner.class
 /Textbook.class
 /download.jpg
 /images.jpg
-/Taco.class
-/TacoRunner.class
-/Array.class
+/Athlete.class
