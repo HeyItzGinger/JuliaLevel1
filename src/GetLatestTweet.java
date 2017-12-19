@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
@@ -20,6 +22,7 @@ public class GetLatestTweet implements ActionListener {
 		GetLatestTweet GLT = new GetLatestTweet();
 	}
 	JTextField tf = new JTextField(15);
+	JTextPane tp = new JTextPane();
 	// 1. Make a UI with a button and a text field for a search term.
 	public GetLatestTweet() {
 		JFrame frame = new JFrame();
@@ -30,14 +33,18 @@ public class GetLatestTweet implements ActionListener {
 		JPanel panel2 = new JPanel();
 		frame.add(panel2, BorderLayout.CENTER);
 		panel1.add(tf);
+		panel1.setBackground(new Color(0xFFFF99));
+		tp.setBackground(new Color(0xFFFF99));
+		tp.setEditable(false);
 		JButton button = new JButton("Get Tweet!");
 		panel1.add(tf);
-		JTextPane tp = new JTextPane();
 		tp.setPreferredSize(new Dimension(500, 500));
-		panel2.add(tp);
 		panel1.add(button);
-		frame.pack();
 		button.addActionListener(this);
+		JScrollPane scroll = new JScrollPane(tp);
+		panel2.add(scroll);
+		frame.pack();
+		
 	}
 
 	// 2. When the button is clicked, print “tweet tweet”.
@@ -59,8 +66,13 @@ public class GetLatestTweet implements ActionListener {
 		Query query = new Query(searchingFor);
 		try {
 			QueryResult result = twitter.search(query);
-			return result.getTweets().get(0).getText();
-		} catch (Exception e) {
+			String l = "";
+			for(int i = 0; i < result.getCount(); i++) {
+			l += result.getTweets().get(i).getText() + "\n";
+			}
+			return l;
+		}
+		 catch (Exception e) {
 			System.err.print(e.getMessage());
 			return "What the heck is that?";
 		}
@@ -70,7 +82,9 @@ public class GetLatestTweet implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("tweet tweet!");
-		String s = getTweet(tf.getText());
+		String s = getLatestTweet(tf.getText());
+		System.out.println(s);
+		tp.setText(s);
 	}
 
 }
