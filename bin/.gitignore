@@ -5,6 +5,7 @@
 /ButtonListener.class
 /ButtonListener2.class
 /ButtonListenerRunner.class
+/Calming.jpg
 /CalmingMusic.mp3
 /Cat.class
 /Cat.wav
@@ -20,6 +21,7 @@
 /DuelingButtons.class
 /FortuneCookie.class
 /GetLatestTweet.class
+/Happy.jpg
 /HappyMusic.mp3
 /HarryPotter.class
 /HarryPotterRunner.class
@@ -51,5 +53,5 @@
 /images.jpg
 /javazoom.jar
 /twitter4j-core-3.0.5.jar
-/Calming.jpg
-/Happy.jpg
+/SensitiveKeyboard.class
+/Candyman.class
