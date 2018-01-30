@@ -7,6 +7,7 @@
 /ButtonListenerRunner.class
 /Calming.jpg
 /CalmingMusic.mp3
+/Candyman.class
 /Cat.class
 /Cat.wav
 /CatRunner.class
@@ -39,6 +40,7 @@
 /Ruler.class
 /SeaCreature.class
 /SeaCreatureRunner.class
+/SensitiveKeyboard.class
 /SimonSaysRecipe.class
 /Smurf.class
 /SmurfsRunner.class
@@ -53,5 +55,5 @@
 /images.jpg
 /javazoom.jar
 /twitter4j-core-3.0.5.jar
-/SensitiveKeyboard.class
-/Candyman.class
+/NBAScoreboard.class
+/NBAController.class
