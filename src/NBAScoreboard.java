@@ -58,4 +58,17 @@ public class NBAScoreboard {
 		frame.pack();
 		
 	}
+	public void setHScore(int increment) {
+		HscoreValue += increment;
+		home2.setText("Score: " + HscoreValue);
+	}
+	public void setAScore(int increment) {
+		AscoreValue += increment;
+	}
+	public void setHTO(int increment) {
+		HtimeoutValue += increment;
+	}
+	public void setATO(int increment) {
+		AtimeoutValue += increment;
+	}
 }

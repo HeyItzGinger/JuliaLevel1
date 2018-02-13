@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 
 public class Candyman implements ActionListener {
 	public static void main(String[] args) {
-		Candyman candy = new Candyman();
+		new Candyman();
 	}
 	// To summon the Candyman, say his name 5 times in the mirror. You can watch the
 	// movie trailer if you like.
@@ -27,7 +27,7 @@ public class Candyman implements ActionListener {
 	int counter = 0;
  public Candyman() {
 	 JFrame f = new JFrame();
-	 f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
+	 f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	 f.setVisible(true);
 	 JButton b = new JButton("Candyman..");
 	 f.add(b);
