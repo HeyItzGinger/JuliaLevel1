@@ -36,6 +36,7 @@
 /NBAScoreboard.class
 /NetflixQueue.class
 /NetflixRunner.class
+/Olympics.class
 /Pencil.class
 /PhotoQuiz.class
 /Right.png
@@ -52,11 +53,11 @@
 /Taco.class
 /TacoRunner.class
 /Textbook.class
+/TypingTutor.class
 /commons-logging-1.1.3.jar
 /download.jpg
 /images.jpg
 /javazoom.jar
-/twitter4j-core-3.0.5.jar
-/TypingTutor.class
-/Olympics.class
 /oAthlete.class
+/twitter4j-core-3.0.5.jar
+/WhakaMole.class
