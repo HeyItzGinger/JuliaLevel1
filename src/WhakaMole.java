@@ -14,6 +14,8 @@ public class WhakaMole implements ActionListener {
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	Random rand = new Random();
+	static int counter = 0;
+	static Date TimeAtStart = new Date();
 
 	public static void main(String[] args) {
 		new WhakaMole();
@@ -36,12 +38,9 @@ public class WhakaMole implements ActionListener {
 			panel.add(moles);
 			if (i == r) {
 				moles.setText("Mole!");
-				frame.dispose();
-				new WhakaMole();
+  
 			}
-			else {
-				speak("Wrongo");
-			}
+			
 			moles.addActionListener(this);
 		}
 	}
@@ -63,7 +62,20 @@ public class WhakaMole implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource()
+		JButton j = (JButton) e.getSource();
+		if (j.getText().equals("Mole!")) {
+			counter ++;
+			if (counter == 10) {
+				endGame(TimeAtStart, 10);
+				System.exit(0);
+			}
+			frame.dispose();
+			new WhakaMole();
+		}
+		else {
+			speak("incorrect.");
+		}
+
 
 	}
 
