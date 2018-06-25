@@ -3,7 +3,7 @@ public class CatRunner {
 	public static void main(String[] args) {
 		/* Do the following things without changing the Cat class */
 		Cat kitty = new Cat("Fluffy");
-		// 1. Make the Cat meow
+		// 1. Ma  ke the Cat meow
 		kitty.meow();
 		// 2. Get the Cat to print it's name
 		kitty.printName();
